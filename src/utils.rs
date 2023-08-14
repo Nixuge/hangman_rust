@@ -16,7 +16,7 @@ pub fn get_letter_input() -> char {
     while input_string.trim().len() != 1 || input_string.trim() == "_" {
         println!("please enter a letter:");
         input_string.clear();
-        io::stdin().read_line(&mut input_string).unwrap();
+        get_input_reuse(&mut input_string);
     }
     return input_string.chars().next().unwrap();
 }
